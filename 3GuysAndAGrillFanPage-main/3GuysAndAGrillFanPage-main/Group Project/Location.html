@@ -1,172 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three Guys And A Grill - Makati Location</title>
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-        }
+<title>Location Page</title>
+<style>
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Light gray background */
+}
 
-        .navbar {
-            background-color: #f7b72d;
-        }
+.container {
+  width: 800px;
+  margin: 20px auto;
+  background-color: #e0e0e0; /* Slightly darker background */
+  padding: 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Adjust the ratio as needed */
+  grid-gap: 20px;
+}
 
-        .navbar-brand img {
-            width: 120px;
-        }
+.left-panel {
+  display: grid;
+  grid-template-rows: auto auto auto auto 1fr; /* Adjust rows as needed */
+  grid-gap: 10px;
+}
 
-        .navbar-nav .nav-link {
-            color: #000;
-            font-size: 20px;
-            margin: 0 10px;
-        }
+.right-panel {
+  display: grid;
+  grid-template-rows: auto auto auto; /* Map, Hours, Contact */
+  grid-gap: 10px;
+}
 
-        .navbar-nav .nav-link:hover {
-            color: red;
-        }
+.header {
+  background-color: white;
+  padding: 10px;
+  text-align: left;
+}
 
-        .map-container {
-            width: 100%;
-            height: 600px;
-            margin-top: 50px;
-        }
+.content {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
 
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+.content.red {
+  background-color: #f08080; /* Light red */
+}
 
-        .location-details {
-            background-color: #f7b72d;
-            color: #000;
-            padding: 50px 20px;
-            text-align: center;
-        }
+.map {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
 
-        .location-details h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
+.hours, .contact {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
 
-        .location-details p {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
+.faqs {
+  background-color: white;
+  padding: 10px;
+}
 
-        .location-details .btn {
-            background-color: #000;
-            color: #fff;
-            font-size: 1.5rem;
-            padding: 10px 20px;
-            margin-top: 20px;
-        }
+.get-directions {
+  text-align: center;
+}
 
-        footer {
-            background-color: #f7b72d;
-            color: #000;
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 50px;
-        }
+.circle {
+  background-color: #6a5acd; /* Slate blue */
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
 
-        footer table {
-            width: 80%;
-            margin: 20px auto;
-        }
-
-        footer table th, footer table td {
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        footer table a {
-            color: #000;
-        }
-
-        footer table a:hover {
-            color: red;
-        }
-
-        .top-button {
-            background-color: #fff;
-            color: #000;
-            border: 1px solid #000;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .top-button:hover {
-            background-color: #000;
-            color: #fff;
-        }
-    </style>
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+}
+</style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <a class="navbar-brand" href="Main Page.html">
-            <img src="images/logo.png" alt="Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="Main Page.html">Home</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
-                    <div class="dropdown-menu" aria-labelledby="aboutUsDropdown">
-                        <a class="dropdown-item" href="Our History.html">Our History</a>
-                        <a class="dropdown-item" href="Our Food.html">Our Food</a>
-                    </div>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="Contacts.html">Contact Us</a></li>
-                <li class="nav-item active"><a class="nav-link" href="Location.html">Location</a></li>
-                <li class="nav-item"><a class="nav-link" href="Delivery.html">Delivery</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
-                    <div class="dropdown-menu" aria-labelledby="menuDropdown">
-                        <a class="dropdown-item" href="Hotdog.html">Hotdogs</a>
-                        <a class="dropdown-item" href="Burgers.html">Burgers</a>
-                        <a class="dropdown-item" href="Bundles.html">Bundles</a>
-                        <a class="dropdown-item" href="Sides.html">Sides</a>
-                        <a class="dropdown-item" href="Drinks.html">Drinks</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.423971932646!2d121.02641777507324!3d14.564553285643485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8e96715f939%3A0xb304c4f346261f1c!2sThree%20Guys%20and%20a%20Grill!5e0!3m2!1sen!2sph!4v1702456488730!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="container">
+  <div class="left-panel">
+    <div class="header">
+      Our Location
     </div>
+    <div class="content">
+      <div class="circle">6</div>
+    </div>
+    <div class="content red"></div>
+    <div class="content red"></div>
+    <div class="content">
+      <div class="circle">5</div>
+    </div>
+    <div class="faqs">
+      FAQs
+      <div class="circle">7</div>
+    </div>
+  </div>
 
-    <section class="location-details">
-        <h2>Our Makati Location</h2>
-        <p>Unit 101 Ground Floor, The Columns Ayala Avenue, Ayala Center, Makati City</p>
-        <p>Located in: The Columns Ayala Avenue</p>
-        <p>Opening Hours:</p>
-        <p>Monday - Saturday: 7 AM - 10 PM</p>
-        <p>Sunday: Closed</p>
-        <p>Address Code: GV5V+R9 Makati, Metro Manila</p>
-        <a href="https://www.google.com/maps/place/Three+Guys+and+a+Grill/@14.5645533,121.0264178,17z/data=!3m1!4b1!4m6!3m5!1s0x3397c8e96715f939:0xb304c4f346261f1c!8m2!3d14.5645533!4d121.0289927!16s%2Fg%2F11bw686256?entry=ttu" target="_blank" class="btn">Get Directions</a>
-    </section>
+  <div class="right-panel">
+    <div class="map">
+      <div class="circle">4</div>
+      [Map Placeholder]
+    </div>
+    <div class="hours">
+      Hours
+      <div class="circle">2</div>
+    </div>
+    <div class="contact">
+      Contact us
+      <div class="circle">1</div>
+    </div>
+    <div class="get-directions">
+      <div class="circle">3</div>
+      Get Directions
+    </div>
+  </div>
+</div>
 
-    <footer>
-        <table>
-            <tr>
-                <th>Developers</th>
-                <th>Pages</th>
-                <th>Socials</th>
-            </tr>
-            <tr>
-                <td>Sunga, Andhrea Luiza</td>
-                <td><a href="References.html">References</a></td>
+</body>
+</html>
