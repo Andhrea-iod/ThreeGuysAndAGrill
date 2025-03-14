@@ -12,9 +12,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            padding-top: 70px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .logo {
@@ -43,6 +45,11 @@
             color: red;
         }
 
+        .web-body {
+            position: relative;
+            flex: 1
+        }
+
         .content {
             max-width: 80%;
             margin: 0 auto;
@@ -50,83 +57,85 @@
             background-color: rgb(255, 242, 226);
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            top: 120px;
+            position: relative;
+            margin-bottom: 130px;
         }
 
         .content h1 {
             text-align: center;
             margin-bottom: 20px;
-
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 100px;
         }
 
         .content p {
             font-size: 18px;
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .content h2 {
             margin-top: 40px;
             margin-bottom: 20px;
             text-align: center;
-			
+            font-size: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
         }
 
-        .food-item {
+        .food-category h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        }
+        
+        .food-content {
             display: flex;
             align-items: center;
+            gap: 30px;
             margin-bottom: 40px;
-			font-size: 20px;
         }
-
-        .food-item img {
-            width: 300px;
-            height: auto;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
-
-        .food-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .food-item p {
+        
+        .food-image {
             flex: 1;
+            text-align: center;
+        }
+        
+        .food-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .food-description {
+            flex: 2;
+            font-size: 25px;
         }
 
         footer {
-            background-color: rgb(247, 183, 45);
-            color: black;
-            text-align: center;
-            padding: 50px 0;
-            width: 100%;
-            position: relative;
-            bottom: 0;
-            left: 0;
-            z-index: 10;
+        position: relative;
+        bottom: 0;
+        z-index: 6;
+        background-color: rgb(247, 183, 45);
+        padding-bottom: 50px;
+        width: 100%;
         }
 
-        footer .footer-text {
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-
-        footer table {
+        footer table, .footer-text {
             width: 50%;
-            margin: 0 auto;
-        }
-
-        footer table th, footer table td {
-            padding: 10px;
-            font-size: 18px;
-        }
-
-        footer table a {
+            margin-left: 50px;
+            line-height: 50px;
+            font-weight: bold;
             color: black;
-            text-decoration: none;
-            transition: color 0.3s;
         }
 
-        footer table a:hover {
-            color: red;
+        table a { 
+            color: black;
+            height: 20px;
+        }
+
+        h2 {
+            font-weight: bold;
+            color: black;
         }
 
         .top {
@@ -207,76 +216,104 @@
             <p>
                 At Three Guys And A Grill, the food is the heart and soul of the dining experience. With a focus on hardwood charcoal grilling, every dish infuses rich, smoky flavors that tantalize the taste buds. From juicy sausages to succulent grilled meats, each item on the menu is carefully crafted to perfection.
             </p>
+            
             <div class="food-item">
-                <img src="images/burgers/texas.png" alt="Texas Burger">
-                <p>
+                <div class="food-category">
                     <h2>Burgers</h2>
-                    Our burgers are a testament to our dedication to quality and flavor. Each burger is made with premium beef, seasoned to perfection, and grilled over an open flame to achieve that perfect char and smoky taste. Whether you prefer the classic Anghang Burger, the savory Texas Burger, or the unique flavors of our Tommy Burger, every bite promises a delightful experience.
-                </p>
+                    <div class="food-content">
+                        <div class="food-image">
+                            <img src="images/burgers/texas.png" alt="Texas Burger">
+                        </div>
+                        <div class="food-description">
+                            Our burgers are a testament to our dedication to quality and flavor. Each burger is made with premium beef, seasoned to perfection, and grilled over an open flame to achieve that perfect char and smoky taste. Whether you prefer the classic Anghang Burger, the savory Texas Burger, or the unique flavors of our Tommy Burger, every bite promises a delightful experience.
+                        </div>
+                    </div>
+                </div>
             </div>
+            
             <div class="food-item">
-                <img src="images/drinks/coke.png" alt="Coke">
-                <p>
+                <div class="food-category">
                     <h2>Drinks</h2>
-                    To complement our hearty meals, we offer a selection of refreshing drinks. Our homemade sodas, infused with natural fruit flavors, provide a delightful alternative to traditional soft drinks. Favorites include our classic Coke, the sugar-free Coke Zero, and the ever-popular Sprite. For those who prefer something lighter, we also offer refreshing bottled water.
-                </p>
+                    <div class="food-content reverse">
+                        <div class="food-description">
+                            To complement our hearty meals, we offer a selection of refreshing drinks. Our homemade sodas, infused with natural fruit flavors, provide a delightful alternative to traditional soft drinks. Favorites include our classic Coke, the sugar-free Coke Zero, and the ever-popular Sprite. For those who prefer something lighter, we also offer refreshing bottled water.
+                        </div>
+                        <div class="food-image">
+                            <img src="images/drinks/coke.png" alt="Coke">
+                        </div>
+                    </div>
+                </div>
             </div>
+            
             <div class="food-item">
-                <img src="images/hotdogs/thunder.png" alt="Thunder Hotdog">
-                <p>
+                <div class="food-category">
                     <h2>Hotdogs</h2>
-                    Our hotdogs are not to be missed. Made with a blend of premium meats and unique seasoning blends, they are grilled to perfection over an open flame. Try our Bird Hotdog for a taste of our smoky, juicy perfection, or indulge in the rich flavors of our Posh Hotdog. The Swiss Hotdog and Thunder Hotdog are also favorites among our guests.
-                </p>
+                    <div class="food-content">
+                        <div class="food-image">
+                            <img src="images/hotdogs/thunder.png" alt="Thunder Hotdog">
+                        </div>
+                        <div class="food-description">
+                            Our hotdogs are not to be missed. Made with a blend of premium meats and unique seasoning blends, they are grilled to perfection over an open flame. Try our Bird Hotdog for a taste of our smoky, juicy perfection, or indulge in the rich flavors of our Posh Hotdog. The Swiss Hotdog and Thunder Hotdog are also favorites among our guests.
+                        </div>
+                    </div>
+                </div>
             </div>
+            
             <div class="food-item">
-                <img src="images/sides/sides.png" alt="Sides">
-                <p>
+                <div class="food-category">
                     <h2>Sides</h2>
-                    No meal is complete without our delicious sides. From crispy fries to fresh salads, our sides are the perfect complement to our grilled specialties. Each side is prepared with the same attention to quality and flavor that defines our main dishes.
-                </p>
+                    <div class="food-content reverse">
+                        <div class="food-description">
+                            No meal is complete without our delicious sides. From crispy fries to fresh salads, our sides are the perfect complement to our grilled specialties. Each side is prepared with the same attention to quality and flavor that defines our main dishes.
+                        </div>
+                        <div class="food-image">
+                            <img src="images/sides/sides.png" alt="Sides">
+                        </div>
+                    </div>
+                </div>
             </div>
+            
             <p>
                 Whether you're dining in our cozy restaurant or enjoying our catering services at an event, Three Guys And A Grill delivers a memorable culinary experience that keeps guests coming back for more. Our commitment to quality ingredients and expert grilling techniques has earned us a reputation as one of the best grill houses in town.
             </p>
         </div>
     </div>
-    <footer>    
-        <h1 class="footer-text">THREE GUYS AND A GRILL</h1>
-        <table>
-            <tr>
-                <th>Developers</th>
-                <th>Pages</th>
-                <th>Socials</th>
-            </tr>
-            <tr>
-                <td>Sunga, Andhrea Luiza</td>
-                <td><a href="References.html">References</a></td>
-                <td><a href="https://www.facebook.com/3GuysGrill">Facebook</a></td>
-            </tr>
-            <tr>
-                <td>Valencia, Jass Simry</td>
-                <td><a href="Our History.html">Our History</a></td>
-                <td><a href="https://www.instagram.com/threeguysandagrill/">Instagram</a></td>
-            </tr>
-            <tr>
-                <td>Robles, Nicole Joy</td>
-                <td><a href="Our Food.html">Our Food</a></td>
-                <td><a href="https://www.threeguysandagrill.com/">Official Site</a></td>
-            </tr>
-            <tr>
-                <td>Najarro, Nathan Spencer</td>
-                <td><a href="Contacts.html">Contact Us</a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><a href="Location.html">Locations</a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><a href="Delivery.html">Delivery</a></td>
-            </tr>
-        </table>
-        <a href="#top" class="top"><button>Back to Top</button></a>
-    </footer>
 </body>
+<footer>
+    <h1 class="footer-text">THREE GUYS AND A GRILL</h1>
+    <table>
+        <tr>
+            <th><h2>Developers</h2></th>
+            <th><h2>Pages</h2></th>
+            <th><h2>Socials</h2></th>
+        </tr>
+        <tr>
+            <td><h3>Sunga, Andhrea Luiza</h3></td>
+            <td><a href="References.html"><h3>References</h3></a></td>
+            <td><a href="https://www.facebook.com/3GuysGrill"><h3>Facebook</h3></a></td>
+        </tr>
+        <tr>
+            <td><h3>Valencia, Jass Simry</h3></td>
+            <td><a href="Our History.html"><h3>Our History</h3></a></td>
+            <td><a href="https://www.instagram.com/threeguysandagrill/"><h3>Instagram</h3></a></td>
+        </tr>
+        <tr>
+            <td><h3>Robles, Nicole Joy</h3></td>
+            <td><a href="Our Food.html"><h3>Our Food</h3></a></td>
+            <td><a href="https://www.threeguysandagrill.com/"><h3>Official Site</h3></a></td>
+        </tr>
+        <tr>
+            <td><h3>Najarro, Nathan Spencer</h3></td>
+            <td><a href="Contacts.html"><h3>Contact Us</h3></a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="Location.html"><h3>Locations</h3></a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="Delivery.html"><h3>Delivery</h3></a></td>
+        </tr>
+    </table>
+</footer>
 </html>

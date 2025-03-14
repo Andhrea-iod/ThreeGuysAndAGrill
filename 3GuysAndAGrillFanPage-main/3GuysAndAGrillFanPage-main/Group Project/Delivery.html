@@ -14,17 +14,12 @@
 <style>
 
     body {
-        height: 1000px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
-	
-	.web-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh; /* Adjust as needed */
-}
-
 
     .logo {
         margin-left: 50px; 
@@ -87,33 +82,34 @@
         bottom: 0;
     }
 
-    .web-body .title {
-	background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-    padding: 20px;
-    position: relative;
-    width: 100%;
-    top: 100px;
-    z-index: 12; /* Increase the z-index */
-    text-align: center;
-    list-style: none;
-    color: white; /* Ensure text is visible */
+    .web-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
+    .web-body .title {
+    padding: 20px;
+    top: 300px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
 
-    .web-body .title li a, .web-body .title li a:hover {
-        color: rgb(255, 255, 255);
-        font-size: x-large;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-
-    .web-body .logo {
-        position: relative;
-        width: auto;
-        height: 150px;
+    .web-body .Logo {
+        vertical-align: middle;
+        width: 400px;
+        height: auto;
         background-color: aliceblue;
-        padding: 10px;
-        top: 50px;
-        float: inline-start;
+        border-radius: 10px;
     }
 
     .pickaroo {
@@ -124,6 +120,7 @@
         margin-right: 100px;
         height: 600px;
 		margin-bottom: 100px;
+        border-radius: 10px;
     }
 
     .order {
@@ -134,7 +131,9 @@
         height: 100px;
         font-size: 35px;
         transition: .7s;
-        color: rgb(75, 33, 16);
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+        font-family: 'Courier New', Courier, monospace;
     }
 
     .order:hover {
@@ -143,41 +142,31 @@
     }
     
     footer {
-        background-color: rgb(247, 183, 45);
-        color: black;
-        text-align: center;
-        padding: 50px 0;
-        width: 100%;
         position: relative;
         bottom: 0;
-        left: 0;
-        z-index: 10;
-    }
+        z-index: 6;
+        background-color: rgb(247, 183, 45);
+        padding-bottom: 50px;
+        width: 100%;
+        }
 
-    footer .footer-text {
-        margin-bottom: 20px;
-        font-size: 1.5rem;
-    }
+        footer table, .footer-text {
+            width: 50%;
+            margin-left: 50px;
+            line-height: 50px;
+            font-weight: bold;
+            color: black;
+        }
 
-    footer table {
-        width: 50%;
-        margin: 0 auto;
-    }
+        table a { 
+            color: black;
+            height: 20px;
+        }
 
-    footer table th, footer table td {
-        padding: 10px;
-        font-size: 18px;
-    }
-
-    footer table a {
-        color: black;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-
-    footer table a:hover {
-        color: red;
-    }
+        h2 {
+            font-weight: bold;
+            color: black;
+        }
 
     .top {
         position: relative;
@@ -256,49 +245,50 @@
     </div>
     <div class="web-body">
         <div class="title">
-            <li><a>Available on PICK-A-ROO</a></li>
-            <a href=""><img src="images/pickaroo_horizontal_black+text.png" class="logo"></a>
-            <img src="images/Pickaroo.png" class="pickaroo">
+            <p>Available on: <img src="images/pickaroo_horizontal_black+text.png" alt="Logo" class="Logo"></p>
         </div>
-        <a href="https://pickaroo.com/three-guys-and-a-grill/products/three-guys-and-a-grill-manila"><button class="order">ORDER NOW</button></a>
+        <div class="Order-Now">
+            <img src="images/pickaroo.png" alt="Pickaroo" class="pickaroo">
+            <a href="https://pickaroo.com/three-guys-and-a-grill/products/three-guys-and-a-grill-manila"><button class="order">ORDER NOW</button></a>
+        </div>
     </div>
-    <footer>    
+    <footer>
+        <br>
         <h1 class="footer-text">THREE GUYS AND A GRILL</h1>
         <table>
             <tr>
-                <th>Developers</th>
-                <th>Pages</th>
-                <th>Socials</th>
+                <th><h2>Developers</h2></th>
+                <th><h2>Pages</h2></th>
+                <th><h2>Socials</h2></th>
             </tr>
             <tr>
-                <td>Sunga, Andhrea Luiza</td>
-                <td><a href="References.html">References</a></td>
-                <td><a href="https://www.facebook.com/3GuysGrill">Facebook</a></td>
+                <td><h3>Sunga, Andhrea Luiza</h3></td>
+                <td><a href="References.html"><h3>References</h3></a></td>
+                <td><a href="https://www.facebook.com/3GuysGrill"><h3>Facebook</h3></a></td>
             </tr>
             <tr>
-                <td>Valencia, Jass Simry</td>
-                <td><a href="Our History.html">Our History</a></td>
-                <td><a href="https://www.instagram.com/threeguysandagrill/">Instagram</a></td>
+                <td><h3>Valencia, Jass Simry</h3></td>
+                <td><a href="Our History.html"><h3>Our History</h3></a></td>
+                <td><a href="https://www.instagram.com/threeguysandagrill/"><h3>Instagram</h3></a></td>
             </tr>
             <tr>
-                <td>Robles, Nicole Joy</td>
-                <td><a href="Our Food.html">Our Food</a></td>
-                <td><a href="https://www.threeguysandagrill.com/">Official Site</a></td>
+                <td><h3>Robles, Nicole Joy</h3></td>
+                <td><a href="Our Food.html"><h3>Our Food</h3></a></td>
+                <td><a href="https://www.threeguysandagrill.com/"><h3>Official Site</h3></a></td>
             </tr>
             <tr>
-                <td>Najarro, Nathan Spencer</td>
-                <td><a href="Contacts.html">Contact Us</a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><a href="Location.html">Locations</a></td>
+                <td><h3>Najarro, Nathan Spencer</h3></td>
+                <td><a href="Contacts.html"><h3>Contact Us</h3></a></td>
             </tr>
             <tr>
                 <td></td>
-                <td><a href="Delivery.html">Delivery</a></td>
+                <td><a href="Location.html"><h3>Locations</h3></a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="Delivery.html"><h3>Delivery</h3></a></td>
             </tr>
         </table>
-        <a href="#top" class="top"><button>Back to Top</button></a>
     </footer>
 </body>
 </html>

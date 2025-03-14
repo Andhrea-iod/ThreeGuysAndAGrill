@@ -11,7 +11,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <style>
-
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
     .logo {
         margin-left: 50px; 
     }
@@ -73,43 +79,54 @@
         bottom: 0;
     }
 
+    .web-body {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
     .web-body a img {
         position: relative;
         z-index: 5;
         border: double rgb(255, 201, 51);
         border-width: 5px;
         margin: 10px;
-        top: 200px;
         transition: .5s;
     }
 
     .web-body a img:hover {
-        top: 160px;
-        transition: .5s;
+        transform: translateY(-50px);
+        transition: transform 1s ease, box-shadow 1s ease;
         box-shadow: 10px 10px 20px rgb(0, 0, 0);
     }
 
     footer {
-        position: absolute;
-        top: 850;
+        position: relative;
         bottom: 0;
         z-index: 6;
         background-color: rgb(247, 183, 45);
-        padding-bottom: 500px;
+        padding-bottom: 50px;
         width: 100%;
-    }
+        }
 
-    footer table, .footer-text {
-        width: 50%;
-        margin-left: 50px;
-        margin-top: 35px;
-        line-height: 50px;
-    }
+        footer table, .footer-text {
+            width: 50%;
+            margin-left: 50px;
+            line-height: 50px;
+            font-weight: bold;
+            color: black;
+        }
 
-    table a { 
-        color: black;
-        height: 20px;
-    }
+        table a { 
+            color: black;
+            height: 20px;
+        }
+
+        h2 {
+            font-weight: bold;
+            color: black;
+        }
 
     .top {
         position: relative;
@@ -177,7 +194,8 @@
             <a><img src="images/Burgers/tommy.png"></a>
         </center>
     </div>
-    <footer>    
+    <footer>
+        <br>
         <h1 class="footer-text">THREE GUYS AND A GRILL</h1>
         <table>
             <tr>
@@ -186,34 +204,33 @@
                 <th><h2>Socials</h2></th>
             </tr>
             <tr>
-                <td><h2>Sunga, Andhrea Luiza</h2></td>
-                <td><a href="References.html"><h2>References</h2></a></td>
-                <td><a href="https://www.facebook.com/3GuysGrill"><h2>Facebook</h2></a></td>
+                <td><h3>Sunga, Andhrea Luiza</h3></td>
+                <td><a href="References.html"><h3>References</h3></a></td>
+                <td><a href="https://www.facebook.com/3GuysGrill"><h3>Facebook</h3></a></td>
             </tr>
             <tr>
-                <td><h2>Valencia, Jass Simry</h2></td>
-                <td><a href="Our History.html"><h2>Our History</h2></a></td>
-                <td><a href="https://www.instagram.com/threeguysandagrill/"><h2>Instagram</h2></a></td>
+                <td><h3>Valencia, Jass Simry</h3></td>
+                <td><a href="Our History.html"><h3>Our History</h3></a></td>
+                <td><a href="https://www.instagram.com/threeguysandagrill/"><h3>Instagram</h3></a></td>
             </tr>
             <tr>
-                <td><h2>Robles, Nicole Joy</h2></td>
-                <td><a href="Our Food.html"><h2>Our Food</h2></a></td>
-                <td><a href="https://www.threeguysandagrill.com/"><h2>Official Site</h2></a></td>
+                <td><h3>Robles, Nicole Joy</h3></td>
+                <td><a href="Our Food.html"><h3>Our Food</h3></a></td>
+                <td><a href="https://www.threeguysandagrill.com/"><h3>Official Site</h3></a></td>
             </tr>
             <tr>
-                <td><h2>Najarro, Nathan Spencer</h2></td>
-                <td><a href="Contacts.html"><h2>Contact Us</h2></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><a href="Location.html"><h2>Locations</h2></a></td>
+                <td><h3>Najarro, Nathan Spencer</h3></td>
+                <td><a href="Contacts.html"><h3>Contact Us</h3></a></td>
             </tr>
             <tr>
                 <td></td>
-                <td><a href="Delivery.html"><h2>Delivery</h2></a></td>
+                <td><a href="Location.html"><h3>Locations</h3></a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="Delivery.html"><h3>Delivery</h3></a></td>
             </tr>
         </table>
-        <a href="#top" class="top"><button>Back to Top</button></a>
     </footer>
 </body>
 </html>
