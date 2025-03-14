@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Three Guys And A Grill</title>
+    <title>Three Guys And A Grill - Contact Us</title>
     <link rel="icon" type="image/x-icon" href="images/logo.png">    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -11,8 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-    <style>
-
+<style>
     .logo {
         margin-left: 50px; 
     }
@@ -63,79 +62,110 @@
 
     .col .aboutUsDropdown {
         color: black;
-
     }
 
-    .content video {
-        min-width: 100%;
-        min-height: 100%;
-        position: fixed;
-        right: 0;
-        bottom: 0;
+    .content {
+        padding: 50px 15px;
     }
 
-    .web-body .title {
-        position: fixed;
-        width: 100%;
-        top: 30%;
-        z-index: 1;
+    .content h2 {
         text-align: center;
-        list-style: none;
+        margin-bottom: 30px;
     }
 
-    .web-body .title li a {
-        color: rgb(247, 183, 45);
-        font-size: x-large;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    .form-group {
+        margin-bottom: 40px;
+		margin-top: 40px;
     }
 
-    .web-body .title a {
-        font-size: 100px;
-        color: white;
-        line-height: 1.0;
-        font-family: 'Courier New', Courier, monospace;
+    .form-group label {
+        font-size: 1.5rem; /* Adjust the font size of the labels */
     }
 
-    .web-body .title a:hover {
-        color: white;
+    .form-control {
+        font-size: 3rem; /* Adjust the font size of the input text */
     }
 
-    .web-body .title p {
-        font-size: medium;
+    .btn-submit {
+        background-color: rgb(247, 183, 45);
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-submit:hover {
+        background-color: black;
         color: white;
     }
 
     footer {
-        position: absolute;
-        bottom: 0;
-        z-index: 6;
         background-color: rgb(247, 183, 45);
-        padding-top: 30px;
-        padding-bottom: 100px;
-        width: 100%;
-    }
-
-    footer table, .footer-text {
-        width: 50%;
-        margin-left: 50px;
-        margin-top: 35px;
-        line-height: 50px;
-    }
-
-    table a { 
         color: black;
-        height: 20px;
+        text-align: center;
+        padding: 50px 0;
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
     }
-    
 
-    </style>	
+    footer .footer-text {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+
+    footer table {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    footer table th, footer table td {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    footer table a {
+        color: black;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    footer table a:hover {
+        color: red;
+    }
+
+    .top {
+        position: relative;
+        font-size: large;
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        margin-top: 20px;
+    }
+
+    .top:hover {
+        color: red;
+    }
+
+    .top button {
+        background-color: white;
+        border: 1px solid black;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .top button:hover {
+        background-color: rgb(247, 183, 45);
+        border-color: rgb(247, 183, 45);
+    }
+</style>	
 <body>
     <a name="top"></a>
-    <div class="content">
-        <video autoplay muted loop id="food">
-            <source src="video.mp4">
-    </video>
-</div>
     <div class="container">
         <nav class="navbar navbar-expand-sm bg-warning navbar-dark fixed-top">
             <a class="logo" href="Main Page.html">
@@ -177,41 +207,66 @@
             </div>
         </nav>
     </div>
+
+    <div class="content">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="submit_contact_form.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
     <footer>    
         <h1 class="footer-text">THREE GUYS AND A GRILL</h1>
         <table>
             <tr>
-                <th><h2>Developers</h2></th>
-                <th><h2>Pages</h2></th>
-                <th><h2>Socials</h2></th>
+                <th>Developers</th>
+                <th>Pages</th>
+                <th>Socials</th>
             </tr>
             <tr>
-                <td><h2>Sunga, Andhrea Luiza</h2></td>
-                <td><a href="References.html"><h2>References</h2></a></td>
-                <td><a href="https://www.facebook.com/3GuysGrill"><h2>Facebook</h2></a></td>
+                <td>Sunga, Andhrea Luiza</td>
+                <td><a href="References.html">References</a></td>
+                <td><a href="https://www.facebook.com/3GuysGrill">Facebook</a></td>
             </tr>
             <tr>
-                <td><h2>Valencia, Jass Simry</h2></td>
-                <td><a href="Our History.html"><h2>Our History</h2></a></td>
-                <td><a href="https://www.instagram.com/threeguysandagrill/"><h2>Instagram</h2></a></td>
+                <td>Valencia, Jass Simry</td>
+                <td><a href="Our History.html">Our History</a></td>
+                <td><a href="https://www.instagram.com/threeguysandagrill/">Instagram</a></td>
             </tr>
             <tr>
-                <td><h2>Robles, Nicole Joy</h2></td>
-                <td><a href="Our Food.html"><h2>Our Food</h2></a></td>
-                <td><a href="https://www.threeguysandagrill.com/"><h2>Official Site</h2></a></td>
+                <td>Robles, Nicole Joy</td>
+                <td><a href="Our Food.html">Our Food</a></td>
+                <td><a href="https://www.threeguysandagrill.com/">Official Site</a></td>
             </tr>
             <tr>
-                <td><h2>Najarro, Nathan Spencer</h2></td>
-                <td><a href="Contacts.html"><h2>Contact Us</h2></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><a href="Location.html"><h2>Locations</h2></a></td>
+                <td>Najarro, Nathan Spencer</td>
+                <td><a href="Contacts.html">Contact Us</a></td>
             </tr>
             <tr>
                 <td></td>
-                <td><a href="Delivery.html"><h2>Delivery</h2></a></td>
+                <td><a href="Location.html">Locations</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="Delivery.html">Delivery</a></td>
             </tr>
         </table>
+        <a href="#top" class="top"><button>Back to Top</button></a>
+    </footer>
 </body>
 </html>
