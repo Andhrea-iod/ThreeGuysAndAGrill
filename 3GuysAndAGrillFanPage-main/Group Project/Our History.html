@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Three Guys And A Grill</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            line-height: 1.6;
+            padding-top: 70px;
+        }
+    
+        .logo {
+            margin-left: 50px;
+            width: 120px;
+        }
+    
+        .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.navbar-toggler {
+    padding: 5px 10px;
+}
+
+.navbar-toggler-icon {
+    background-color: black;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    color: red;
+}
+
+    
+        .dropdown-menu a {
+            font-size: large;
+            padding: 10px;
+        }
+    
+        .col .aboutUsDropdown {
+            color: black;
+        }
+    
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .content video {
+            min-width: 100%;
+            min-height: 100%;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+
+        .content image {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        }
+
+        .history p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            margin: 0 auto;
+            width: 75%;
+            text-align: center;
+            color: #555;
+        }
+
+        .history h1 {
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 30px;
+
+        }
+    
+        .history {
+            position: relative;
+            padding: 120px;
+            background-color: rgb(255, 242, 226);
+            width: 70%;
+            margin: 0 auto;
+        }
+    
+        footer {
+            background-color: rgb(247, 183, 45);
+            color: black;
+            text-align: center;
+            padding: 50px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+        }
+    
+        footer .footer-text {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+    
+        footer table {
+            width: 50%;
+            margin: 0 auto;
+        }
+    
+        footer table th, 
+        footer table td {
+            padding: 10px;
+            font-size: 18px;
+        }
+    
+        footer table a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+    
+        footer table a:hover {
+            color: red;
+        }
+    
+        .web-body p {
+            font-size: x-large;
+        }
+    
+        .top {
+            position: relative;
+            font-size: large;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin-top: 20px;
+        }
+    
+        .top:hover {
+            color: red;
+        }
+    
+        .top button {
+            background-color: white;
+            border: 1px solid black;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+    
+        .top button:hover {
+            background-color: rgb(247, 183, 45);
+            border-color: rgb(247, 183, 45);
+        }
+    </style>
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div class="content">
+        <video autoplay muted loop id="food">
+            <source src="video.mp4">
+        </video>
+    </div>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm bg-warning navbar-dark fixed-top">
+            <a class="logo" href="Main Page.html">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+        
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#col">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="col">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="Main Page.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutUsDropdown">
+                            <a class="dropdown-item" href="Our History.html">Our History</a>
+                            <a class="dropdown-item" href="Our Food.html">Our Food</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Contacts.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Location.html">Location</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Delivery.html">Delivery</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="menuDropdown">
+                            <a class="dropdown-item" href="Hotdog.html">Hotdogs</a>
+                            <a class="dropdown-item" href="Burgers.html">Burgers</a>
+                            <a class="dropdown-item" href="Bundles.html">Bundles</a>
+                            <a class="dropdown-item" href="Sides.html">Sides</a>
+                            <a class="dropdown-item" href="Drinks.html">Drinks</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="web-body">
+        <center>
+            <div class="history">
+                
+                <h1>OUR HISTORY</h1>
+
+                <img src="history.jpg" alt="History">
+                
+                <hr>
+                <p>Three Guys And A Grill is a cozy restaurant owned by three friends from different parts of the world. Duncan, a Kiwi; Tom, who hails from Switzerland; and Frank, a Filipino-American, came together to share their homemade recipes with locals and foreigners alike. Their journey began with a shared desire to introduce the best sausages to the Philippines. <br><br>
+                    Inside the warm and inviting restaurant, guests can witness the trusty grill where all the magic happens. Using locally sourced ingredients, they craft mouth-watering dishes and sauces in their kitchen. Their homemade ketchup, muscovado sugar, and fruity guava mustard add unique flavors to every bite. <br><br>
+                    Concerned about health, Three Guys And A Grill offers homemade sodas infused with fruit-flavored syrup as an alternative to soft drinks. They aim to provide a wholesome dining experience for everyone. <br><br>
+                    Known for their expertise in hardwood charcoal grilling, Three Guys And A Grill operates as a supper club and catering service in Sheboygan County's Broughton Marsh Park. The rustic log cabin ambiance adds charm to the dining experience, perfect for families.<br><br>
+                    Their menu features tempting appetizers like alligator, deep-fried asparagus, and Wisconsin's staple white and orange cheddar cheese curds. Guests can savor delicious charcoal-grilled dinner sandwiches and indulge in hand-muddled Old-Fashioned cocktails at the full bar. <br><br>
+                    On weekends, guests can enjoy breakfast while taking in the recreational activities offered at the Marsh Park, including an observation tower, canoeing, fishing, playground, and disk and foot-golf courses.<br><br>
+                    Three Guys & a Grill offers fantastic charcoal grill catering services for those planning events. With portable grills on wheels, they can bring the excitement of hardwood charcoal cooking to any party within a 100-mile radius, serving over 1000 people with a wide selection of menu options.<br><br>
+                </p>
+            </div>
+        </center>
+    </div>
+    <footer>    
+        <h1 class="footer-text">THREE GUYS AND A GRILL</h1>
+        <table>
+            <tr>
+                <th>Developers</th>
+                <th>Pages</th>
+                <th>Socials</th>
+            </tr>
+            <tr>
+                <td>Sunga, Andhrea Luiza</td>
+                <td><a href="References.html">References</a></td>
+                <td><a href="https://www.facebook.com/3GuysGrill">Facebook</a></td>
+            </tr>
+            <tr>
+                <td>Valencia, Jass Simry</td>
+                <td><a href="Our History.html">Our History</a></td>
+                <td><a href="https://www.instagram.com/threeguysandagrill/">Instagram</a></td>
+            </tr>
+            <tr>
+                <td>Robles, Nicole Joy</td>
+                <td><a href="Our Food.html">Our Food</a></td>
+                <td><a href="https://www.threeguysandagrill.com/">Official Site</a></td>
+            </tr>
+            <tr>
+                <td>Najarro, Nathan Spencer</td>
+                <td><a href="Contacts.html">Contact Us</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="Location.html">Locations</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="Delivery.html">Delivery</a></td>
+            </tr>
+        </table>
+        <a href="#top" class="top"><button>Back to Top</button></a>
+    </footer>
+</body>
+</html>
