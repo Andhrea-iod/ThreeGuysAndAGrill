@@ -121,12 +121,12 @@
         position: relative;
         bottom: 0;
         left: 0;
-        z-index: 10;
+        z-index: 10; /* Ensure it stays above other elements */
       }
 
       footer .footer-text {
         margin-bottom: 20px;
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Increase font size */
       }
 
       footer table {
@@ -134,8 +134,7 @@
         margin: 0 auto;
       }
 
-      footer table th,
-      footer table td {
+      footer table th, footer table td {
         padding: 10px;
         font-size: 18px;
       }
