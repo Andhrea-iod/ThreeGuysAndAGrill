@@ -22,39 +22,38 @@
         }
     
         .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
 
-.navbar-collapse {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-}
+        .navbar-collapse {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
 
-.navbar-toggler {
-    padding: 5px 10px;
-}
+        .navbar-toggler {
+            padding: 5px 10px;
+        }
 
-.navbar-toggler-icon {
-    background-color: black;
-}
+        .navbar-toggler-icon {
+            background-color: black;
+        }
 
-.navbar-nav .nav-item .nav-link {
-    font-size: 20px;
-    text-decoration: none;
-    color: black;
-    margin: 10px;
-    transition: color 0.3s ease;
-}
+        .navbar-nav .nav-item .nav-link {
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+            transition: color 0.3s ease;
+        }
 
-.navbar-nav .nav-item:hover .nav-link {
-    color: red;
-}
+        .navbar-nav .nav-item:hover .nav-link {
+            color: red;
+        }
 
-    
         .dropdown-menu a {
             font-size: large;
             padding: 10px;
@@ -79,9 +78,12 @@
             bottom: 0;
         }
 
-        .content image {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        .content img {
+            width: 100%;
+            height: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border-radius: 10px;
         }
 
         .history p {
@@ -97,15 +99,16 @@
             text-align: center;
             font-size: 45px;
             margin-bottom: 30px;
-
         }
     
         .history {
             position: relative;
-            padding: 120px;
+            padding: 40px;
             background-color: rgb(255, 242, 226);
             width: 70%;
             margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
     
         footer {
@@ -176,6 +179,40 @@
             background-color: rgb(247, 183, 45);
             border-color: rgb(247, 183, 45);
         }
+
+        @media (max-width: 768px) {
+            .logo {
+                margin-left: 20px;
+                width: 80px;
+            }
+
+            .navbar-collapse .nav-link {
+                font-size: 16px;
+            }
+
+            .history {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .history p {
+                width: 100%;
+            }
+
+            footer table {
+                width: 80%;
+            }
+
+            footer table th, footer table td {
+                font-size: 14px;
+            }
+
+            .content video {
+                position: static;
+                width: 100%;
+                height: auto;
+            }
+        }
     </style>
     
 </head>
@@ -230,11 +267,8 @@
     <div class="web-body">
         <center>
             <div class="history">
-                
                 <h1>OUR HISTORY</h1>
-
                 <img src="history.jpg" alt="History">
-                
                 <hr>
                 <p>Three Guys And A Grill is a cozy restaurant owned by three friends from different parts of the world. Duncan, a Kiwi; Tom, who hails from Switzerland; and Frank, a Filipino-American, came together to share their homemade recipes with locals and foreigners alike. Their journey began with a shared desire to introduce the best sausages to the Philippines. <br><br>
                     Inside the warm and inviting restaurant, guests can witness the trusty grill where all the magic happens. Using locally sourced ingredients, they craft mouth-watering dishes and sauces in their kitchen. Their homemade ketchup, muscovado sugar, and fruity guava mustard add unique flavors to every bite. <br><br>
