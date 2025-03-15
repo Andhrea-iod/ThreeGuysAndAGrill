@@ -55,7 +55,6 @@
             text-align: center;
             font-size: 45px;
             margin-bottom: 20px;
-
         }
 
         .content p {
@@ -71,83 +70,85 @@
             margin-top: 40px;
             margin-bottom: 20px;
             text-align: center;
-			
         }
 
         .dropdown-menu a {
-        font-size: large;
-        padding: 10;
-    }
+            font-size: large;
+            padding: 10;
+        }
 
-    .food-menu {
-    display: flex;
-    justify-content: space-between; /* Ensures even spacing */
-    flex-wrap: nowrap; /* Prevents wrapping to a new row */
-    gap: 20px;
-    max-width: 100%;
-    overflow-x: auto; /* Allows horizontal scrolling if necessary */
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
+        .food-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 100%;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
 
-.food-item {
-    width: 24%; /* Adjusted for 4 items in one row */
-    height: 600px; /* Fixed height */
-    border: 5px double rgb(255, 201, 51);
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 5;
-    transition: 0.5s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-}
+        .food-item {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border: 5px double rgb(255, 201, 51);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 5;
+            transition: 0.5s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
 
-.food-item:hover {
-    top: -10px;
-    transition: 0.5s;
-    box-shadow: 10px 10px 20px rgb(0, 0, 0);
-}
+        .food-item:hover {
+            top: -10px;
+            transition: 0.5s;
+            box-shadow: 10px 10px 20px rgb(0, 0, 0);
+        }
 
-.food-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-}
+        .food-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
 
-.food-item h2 {
-    font-size: 20px;
-    margin: 10px 0;
-}
+        .food-item h2 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
 
-.food-item p {
-    font-size: 14px;
-    color: #555;
-    flex-grow: 1;
-    overflow: hidden;
-}
+        .food-item p {
+            font-size: 14px;
+            color: #555;
+            flex-grow: 1;
+            overflow: hidden;
+        }
 
-.food-item button {
-    background-color: orange;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    margin-top: auto;
-}
+        .food-item a {
+            text-decoration: none;
+        }
 
-.food-item button:hover {
-    background-color: darkorange;
-}
+        .food-item button {
+            background-color: orange;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: auto;
+        }
 
+        .food-item button:hover {
+            background-color: darkorange;
+        }
 
         footer {
             background-color: rgb(247, 183, 45);
@@ -212,6 +213,25 @@
             background-color: rgb(247, 183, 45);
             border-color: rgb(247, 183, 45);
         }
+
+        @media (max-width: 768px) {
+            .food-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .content p {
+                width: 100%;
+            }
+
+            footer table {
+                width: 80%;
+            }
+
+            footer table th, footer table td {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -260,44 +280,44 @@
     <div class="web-body">
         <div class="content">
             <h1>OUR FOOD</h1>
-<hr>
-<p>
-    At Three Guys And A Grill, the food is the heart and soul of the dining experience. With a focus on hardwood charcoal grilling, every dish infuses rich, smoky flavors that tantalize the taste buds. From juicy sausages to succulent grilled meats, each item on the menu is carefully crafted to perfection.
-</p>
+            <hr>
+            <p>
+                At Three Guys And A Grill, the food is the heart and soul of the dining experience. With a focus on hardwood charcoal grilling, every dish infuses rich, smoky flavors that tantalize the taste buds. From juicy sausages to succulent grilled meats, each item on the menu is carefully crafted to perfection.
+            </p>
 
-<div class="food-menu">
-    <div class="food-item">
-        <img src="ofburger.jpg" alt="Texas Burger">
-        <h2>Burgers</h2>
-        <p>Our burgers are a testament to our dedication to quality and flavor. Each burger is made with premium beef, seasoned to perfection, and grilled over an open flame to achieve that perfect char and smoky taste.</p>
-        <button>Order Now</button>
-    </div>
+            <div class="food-menu">
+                <div class="food-item">
+                    <img src="ofburger.jpg" alt="Texas Burger">
+                    <h2>Burgers</h2>
+                    <p>Our burgers are a testament to our dedication to quality and flavor. Each burger is made with premium beef, seasoned to perfection, and grilled over an open flame to achieve that perfect char and smoky taste.</p>
+                    <a href="Delivery.html"><button>Order Now</button></a>
+                </div>
 
-    <div class="food-item">
-        <img src="ofdrink.jpg" alt="Coke">
-        <h2>Drinks</h2>
-        <p>To complement our hearty meals, we offer a selection of refreshing drinks, including classic Coke, Coke Zero, and Sprite.</p>
-        <button>Order Now</button>
-    </div>
+                <div class="food-item">
+                    <img src="ofdrink.jpg" alt="Coke">
+                    <h2>Drinks</h2>
+                    <p>To complement our hearty meals, we offer a selection of refreshing drinks, including classic Coke, Coke Zero, and Sprite.</p>
+                    <a href="Delivery.html"><button>Order Now</button></a>
+                </div>
 
-    <div class="food-item">
-        <img src="ofhotdog.jpg" alt="Thunder Hotdog">
-        <h2>Hotdogs</h2>
-        <p>Made with premium meats and unique seasoning blends, our hotdogs are grilled to perfection over an open flame.</p>
-        <button>Order Now</button>
-    </div>
+                <div class="food-item">
+                    <img src="ofhotdog.jpg" alt="Thunder Hotdog">
+                    <h2>Hotdogs</h2>
+                    <p>Made with premium meats and unique seasoning blends, our hotdogs are grilled to perfection over an open flame.</p>
+                    <a href="Delivery.html"><button>Order Now</button></a>
+                </div>
 
-    <div class="food-item">
-        <img src="ofsides.jpg" alt="Sides">
-        <h2>Sides</h2>
-        <p>No meal is complete without our delicious sides. From crispy fries to fresh salads, our sides are the perfect complement to our grilled specialties.</p>
-        <button>Order Now</button>
-    </div>
-</div>
+                <div class="food-item">
+                    <img src="ofsides.jpg" alt="Sides">
+                    <h2>Sides</h2>
+                    <p>No meal is complete without our delicious sides. From crispy fries to fresh salads, our sides are the perfect complement to our grilled specialties.</p>
+                    <a href="Delivery.html"><button>Order Now</button></a>
+                </div>
+            </div>
 
-<p>
-    Whether you're dining in our cozy restaurant or enjoying our catering services, Three Guys And A Grill delivers a memorable culinary experience that keeps guests coming back for more.
-</p>
+            <p>
+                Whether you're dining in our cozy restaurant or enjoying our catering services, Three Guys And A Grill delivers a memorable culinary experience that keeps guests coming back for more.
+            </p>
 
         </div>
     </div>
