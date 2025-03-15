@@ -13,6 +13,8 @@
     <style>
         body {
             height: 1000px;
+            line-height: 1.6;
+            padding-top: 70px;
         }
 
         .logo {
@@ -60,7 +62,7 @@
 
         .dropdown-menu a {
             font-size: large;
-            padding: 10;
+            padding: 10px;
         }
 
         .col .aboutUsDropdown {
@@ -77,11 +79,13 @@
 
         .ref {
             position: relative;
-            padding: 120px;
+            padding: 40px;
             background-color: rgb(255, 242, 226);
             width: 70%;
-            height: 1300px;
+            margin: 0 auto;
             text-align: left;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         footer {
@@ -150,6 +154,30 @@
         .top button:hover {
             background-color: rgb(247, 183, 45);
             border-color: rgb(247, 183, 45);
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                margin-left: 20px;
+                width: 80px;
+            }
+
+            .navbar-collapse .nav-link {
+                font-size: 16px;
+            }
+
+            .ref {
+                width: 90%;
+                padding: 20px;
+            }
+
+            footer table {
+                width: 80%;
+            }
+
+            footer table th, footer table td {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
